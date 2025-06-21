@@ -13,7 +13,7 @@ async def start(message: types.Message):
     keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
     web_app_button = KeyboardButton(
         text="🎰 Играть",
-        web_app=WebAppInfo(url="https://telegram-spin-app.vercel.app/")
+        web_app=WebAppInfo(url="https://v0-new-project-3o4vvda4eqi.vercel.app/")
     )
     keyboard.add(web_app_button)
     await message.answer("Нажми кнопку ниже, чтобы сыграть 🎰", reply_markup=keyboard)
