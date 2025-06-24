@@ -1,7 +1,12 @@
-
 import logging
 from aiogram import Bot, Dispatcher, types
-from aiogram.types import WebAppInfo, InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import (
+    WebAppInfo,
+    InlineKeyboardMarkup,
+    InlineKeyboardButton,
+    ReplyKeyboardMarkup,
+    KeyboardButton
+)
 from aiogram.utils import executor
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
