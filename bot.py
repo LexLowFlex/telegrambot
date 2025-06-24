@@ -28,7 +28,7 @@ async def start_cmd(message: types.Message):
 
     keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
     web_app_button = KeyboardButton(
-        text="🎰 Играть",
+        text=" Играть",
         web_app=WebAppInfo(url=WEB_APP_URL)
     )
     keyboard.add(web_app_button)
