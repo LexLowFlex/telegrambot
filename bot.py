@@ -18,22 +18,17 @@ scheduler = AsyncIOScheduler()
 user_ids = set()
 
 @dp.message_handler(commands=['start'])
-async def start_handler(message: types.Message):
+async def start_cmd(message: types.Message):
     user_ids.add(message.from_user.id)
 
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🎰 Запустить слот", web_app=WebAppInfo(url=WEB_APP_URL))]
-    ])
-    await message.answer("Добро пожаловать! Жми кнопку ниже, чтобы испытать удачу 👇", reply_markup=keyboard)
-    
-    @dp.message_handler(commands=['start'])
-async def start_cmd(message: types.Message):
     keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
     web_app_button = KeyboardButton(
         text="🎰 Играть",
-        web_app=WebAppInfo(url="https://v0-new-project-3o4vvda4eqi.vercel.app/")
+        web_app=WebAppInfo(url=WEB_APP_URL)
     )
     keyboard.add(web_app_button)
+
+    await message.answer("Добро пожаловать! Нажми кнопку ниже, чтобы испытать удачу 🎯", reply_markup=keyboard)
 
 @dp.message_handler(content_types=types.ContentType.WEB_APP_DATA)
 async def web_app_data_handler(message: types.Message):
