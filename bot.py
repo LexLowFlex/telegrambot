@@ -11,7 +11,7 @@ from aiogram.utils import executor
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
 
-API_TOKEN = '8148642069:AAFqos5HOo3Op_tNudRvIOFNqUeMbjjVaa0'
+API_TOKEN = '8156758750:AAGrXelrT3hrn-lQ3uEiEX1-DzjdKJhfgG0'
 WEB_APP_URL = 'https://v0-new-project-3o4vvda4eqi.vercel.app/'
 
 logging.basicConfig(level=logging.INFO)
